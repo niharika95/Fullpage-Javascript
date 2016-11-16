@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fullpage Trial</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.js"></script>
+	<script src="vendors/jquery.easings.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+		    sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke']
+		});
+
+		$(".secdown").click(function() {
+$.fn.fullpage.setAllowScrolling(true);
+		})
+    });
+	</script>
+
+	<style type="text/css">
+		.section{
+		    font-size: 6em;
+		    text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="fullpage">
+    <div class="section">Section 1
+		<button class="secdown">Push to go down</button>
+    </div>
+    <div class="section">
+    	<div class="slide" data-anchor="slide1"> Slide 1 </div>
+	    <div class="slide" data-anchor="slide2"> Slide 2 </div>
+	    <div class="slide" data-anchor="slide3"> Slide 3 </div>
+	    <div class="slide" data-anchor="slide4"> Slide 4 </div>
+    </div>
+    <div class="section">Section 3</div>
+</div>
+</body>
+</html>
